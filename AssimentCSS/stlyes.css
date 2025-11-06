@@ -10,8 +10,11 @@ body{
     padding: 10px;
 
 }
-#headingForm{
-  text-align: left;
+#headingForm span{
+
+  text-decoration: underline;
+  text-decoration-color: blue;
+
 
 }
 

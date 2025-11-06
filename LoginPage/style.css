@@ -16,6 +16,8 @@ body{
 #formHeading{
     color: blue;
     text-align: center;
+    text-decoration: underline;
+    text-decoration-color: blue;
 }
 #loginForm{
     width: fit-content;
