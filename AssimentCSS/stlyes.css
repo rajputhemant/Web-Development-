@@ -79,6 +79,11 @@ input{
   border-radius: 5px;
 
 }
+.btn:hover{
+  border: 1px solid #007816;
+  background-color: #3c7847;
+  color: aliceblue;
+}
 .Signup{
   text-align: center;
   margin-top: 15px;
