@@ -1,0 +1,142 @@
+#mainContenair{
+    margin: 0;
+    padding: 0;
+
+
+}
+#naviBar{
+    display: flex;
+    align-content: baseline;
+    position: sticky;
+    top: 0;
+    gap:5%;
+    background-color: white;
+
+    
+
+}
+
+#naviBar span a{
+    align-content: center;
+    display: inline-block;
+    background-color:white;
+    color: black;
+    text-decoration: none;
+}
+#btn{
+    margin: 2px;
+    gap: 10px;
+    size: 20px;
+
+}
+.but{
+    background-color: white;
+    border: 1px solid black;
+    color:black;
+}
+.button{
+    background-color:black;
+    border: 1px solid black;
+    color:white;
+}
+
+#myDetail {
+  display: flex;             
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;                    
+  padding: 40px;
+  background-color: white;    
+  color: black;              
+}
+
+
+#myDetail span {
+  display: flex;
+  flex-direction: column;       
+  max-width: 600px;
+}
+
+
+#myDetail h1 {
+  font-size: 50px;
+  margin-bottom: 15px;
+  color: black               
+}
+
+#myDetail h3 {
+  font-size: 25px;
+  color: rgb(231, 227, 227);
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+/* Contact section */
+#contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#contact span {
+  display: flex;
+
+  gap: 10px;
+}
+#contact span:last-child {
+  display: flex;
+  align-items: right;
+  gap: 5px;              
+  font-size: 20px;
+  color: white;
+}
+
+#contact label {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#contact input {
+  
+  padding: 10px;
+  font-size: 20x;
+  border: 1px solid black;
+  border-radius: 5px;
+  outline: none;
+}
+
+#contact button {
+  padding: 10px 15px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#contact button:hover {
+  background-color: #0097a7;
+}
+
+
+#contact a {
+  color: rgb(176, 171, 171);
+  text-decoration: underline;
+}
+#contact a:hover {
+  text-decoration: underline;
+}
+
+
+#myDetail img {
+  width: 800px;
+  height: 800px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+}
+
+
