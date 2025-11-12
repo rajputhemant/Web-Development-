@@ -320,7 +320,8 @@
       width: 200px;
       height: 200px;
       background-color:white;
-      color:rgb(183, 179, 179);   
+      filter: grayscale(100%);
+      color:aliceblue   
 }
 #ids{
    display: flex;       
