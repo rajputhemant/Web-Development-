@@ -64,8 +64,7 @@
 #myDetail {
   display: flex;       
   align-items: center;      
-  justify-content: space-around;
-  gap: 5px;
+ justify-content: space-around;
   padding: 25px;
   gap: 40px;                    
   padding: 40px;
