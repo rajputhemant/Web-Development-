@@ -28,3 +28,10 @@ height: 50px !important;
     height: 60px !important;
     border-radius: 18px;
 }
+#last{
+    background-color: rgb(18,87,133);
+}
+#mainContainer{
+    background-color:rgb(234, 248, 254);
+    width: fit-content;
+}
