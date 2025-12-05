@@ -21,7 +21,7 @@ input {
   font-size: xx-large;
 }
 #cancel {
-  background: green;
+  background: rgb(203, 14, 14);
   color: white;
   font-size: xx-large;
   width: 80px;
@@ -37,7 +37,7 @@ input {
 }
 
 .btn {
-  background: green;
+  background: rgb(13, 14, 13);
   color: white;
   font-size: xx-large;
   border-radius: 7px;
@@ -49,5 +49,5 @@ button:active{
 
 
 #cancel:active{
-    background:red;
+    background:#ff0000;
 }
