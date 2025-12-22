@@ -3,6 +3,10 @@ function Salary(){
  
     let salary = Number(Inputsalary);
     let TotalSalary=0;
+
+    if(!Inputsalary){
+        alert("Plase Enter Salary First")
+    }
     
     if(salary<=10000){
        let HRA =salary*0.2;

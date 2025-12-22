@@ -1,5 +1,9 @@
 function calculate(){
     const unit= document.getElementById("Bill").value.trim();
+    
+    if(!unit){
+        alert("Please Enter Unit")
+    }
   
     let subTotal=0;
 
@@ -27,5 +31,6 @@ function calculate(){
 
 }
 function Reset(){
-   document.getElementById("Bill").reset();
+    document.getElementById("unit").value="";
+   document.getElementById("Bill").classList.add("d-none");
 }
