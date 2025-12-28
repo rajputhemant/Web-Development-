@@ -3,7 +3,7 @@ import {Link} from"react-router-dom";
 const Header= ()=>{
     return(
         <>
-       <div className="d-flex justify-content-bettwen  align-items-center p-2 bg-primary gap-5">
+       <div className="d-flex justify-content-bettwen  align-items-center p-2 bg-primary gap-5 ">
         <h1>My website</h1>
         <div className="d-flex gap-3">
             
