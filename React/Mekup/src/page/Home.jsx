@@ -1,49 +1,65 @@
 import React from "react";
-import logo from "../assets/Logo.png";
-import girl from "../assets/n2.jpg";
-import girl2 from "../assets/n3.jpg";
-import girl3 from "../assets/n4.jpg";
-import girl4 from "../assets/n5.jpg";
+
+import lips from "../assets/lip.jpg";
+import viedo from "../assets/videow.mp4"
+import p1 from "../assets/h11.jpg";
+import p2 from "../assets/h21.jpg";
+import p3 from "../assets/h31.jpg";
+import p11 from "../assets/h1.jpg";
+import p21 from "../assets/h2.jpg";
+import p31 from "../assets/h3.jpg";
 
 const Home = () => {
   return (
     <>
     <div>
-      <div className=" w-370 h-120 flex gap-90 mx-6 mt-5 shadow-2xs shadow-blue-600 rounded bg-amber-100 ">
-         <div className="w-130 h-90 m-5">
-          <p>
-            Our makeup store offers a wide range of high-quality beauty products
-            for every skin type. From everyday essentials to professional
-            makeup, we bring you trusted brands at affordable prices. We believe
-            makeup is not about hiding, but enhancing your natural beauty. Shop
-            with us for confidence, style, and a flawless look every day.
-          </p>
-          <button className=" bg-amber-300 text-red-800 border-2 shadow-2xs rounded hover:bg-blue-100 hover:text-black  mt-8 w-30 " >Go To Shop</button>
-        </div>
-        <div className="h-100 w-90 m-5">
-          <img src={logo} className="w-600" alt="Logo" />
-        </div> 
+      <div className="relative ">
+        <img src={lips} className="w-full rounded-lg" alt="Lips"
+           
+        />
+        <button className="absolute bottom-10  ms-20 bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-amber-400"onClick={() => alert("Button Clicked")}>By Now</button>
+      </div>
+      <div className=" w-370 h-120 flex  mx-6 mt-5 shadow-2xs shadow-blue-600 rounded bg-amber-100 ">
+         
+          <video  className="w-370 h-120 " controls>
+            <source src={viedo}  type="video/mp4" />
+            </video> 
+         
+       
+      
       </div>
 
-         <div className=" bg-amber-200 w-370 h-90 mx-6 mt-1 shadow-2xs shadow-blue-800">
-              <div className=" flex justify-center text-red-600 font-bold ">  
-              <h1>Some Used </h1>
+         <div className=" bg-amber-200 w-370 h-150 mx-6 mt-1 shadow-2xs shadow-blue-800">
+              <div className=" flex justify-center text-red-600 font-bold text-lg ">  
+              <h1>New Launches </h1>
               </div>
-        <div className="flex flex-3  justify-around mt-7">
-          <div>
-             <img src={girl} className="w-50 h-40" alt="Logo" />
+        <div className="flex   justify-around mt-7 gap-5">
+          
+            <div className="relative group w-90">
+          <img src={p1} className="rounded-lg group-hover:opacity-0 transition duration-300" alt="" />
+          <img src={p11} className="absolute top-0 left-0 rounded-lg opacity-0 group-hover:opacity-100 transition duration-300" alt="" />
+          <p className="text-gray-800 mt-3">GLIDE PEPTIDE PLUMPING GLOSS STICK</p>
+          <p className="text-gray-800" > Rs. 699.00</p>
+          <button className="absolute w-90  mt-3 bg-black text-white px-4 py-2 rounded-md hover:bg-amber-400">ADD TO CART</button>
           </div>
-          <div>
-             <img src={girl2} className="w-50 h-40"  alt="Logo" />
+          <div className="relative group w-90">
+          <img src={p2} className="rounded-lg group-hover:opacity-0 transition duration-300" alt="" />
+          <img src={p21} className="absolute top-0 left-0 rounded-lg opacity-0 group-hover:opacity-100 transition duration-300" alt="" />
+          <p className="text-gray-800 mt-3">GLIDE PEPTIDE SERUM LIPSTICK</p>
+          <p className="text-gray-800" > Rs. 499.00</p>
+          <button className="absolute w-90  mt-3 bg-black text-white px-4 py-2 rounded-md hover:bg-amber-400">ADD TO CART</button>
           </div>
-          <div>
-             <img src={girl3} className="w-50 h-40" alt="Logo" />
+          <div className="relative group w-90">
+          <img src={p3} className="rounded-lg group-hover:opacity-0 transition duration-300" alt="" />
+          <img src={p31} className="absolute top-0 left-0 rounded-lg opacity-0 group-hover:opacity-100 transition duration-300" alt="" />
+          <p className="text-gray-800 mt-3">PARTNER IN SHINE TRANSFERPROOF LIP GLOSS</p>
+          <p className="text-gray-800" > Rs. 699.00</p>
+          <button className="absolute w-90  mt-3 bg-black text-white px-4 py-2 rounded-md hover:bg-amber-400">ADD TO CART</button>
           </div>
-          <div>
-             <img src={girl4} className="w-50 h-40" alt="Logo" />
-          </div>
+          
         </div>
         </div>
+       
 
       </div>
     </>
