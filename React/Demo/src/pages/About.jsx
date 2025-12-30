@@ -1,88 +1,134 @@
 import React, { useState } from "react";
-import { use } from "react";
 
-const about = () => {
-  const [FullName, setFullName] = useState("");
-  const [Email, setEmail] = useState("");
-  const [TextArea, setTextArea] = useState("");
-  const [isLoading,setIsloading]=useState(false);
+const About = () => {
+  const [contactData, setContactData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    city: "",
+    subject: "",
+    message: "",
+  });
 
-  const handleClearFrom=()=>{
-    setFullName("");
-    setEmail("");
-    setTextArea("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.traget;
+    setContactData((previousData) => ({ ...previousData, [name]: value }));
   };
-  const handleSubmitFrom= async(e)=>{
+
+  const handleClearForm = () => {};
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsloading(true);
-   try{
-    const response= await fetch("https://official-joke-api.appspot.com/jokes/random");
-    setTimeout(()=>{
-         
-    const data ={
-        FullName,
-        Email,
-        TextArea,
-    };
-    console.log(data);
-    },5000)
-   } catch (error){
-    console.log(error,message);
-   } finally{
-    setIsloading(false);
-   }
-
-
-    handleClearFrom();
+    setIsLoading(true);
+    try {
+      const response = await fetch(
+        "https://official-joke-api.appspot.com/jokes/jhbaskdjbf"
+      );
+    } catch (error) {
+      console.log(error.message);
+    } finally {
+      setIsLoading(false);
+    }
+    handleClearForm();
   };
 
   return (
     <>
-      <div className="text-center mx-2 mb-3 gap-2">
-        <div>
-          <h1>Contact us</h1>
+      <div className="text-center">
+        <h1>Contact Us</h1>
+        <div className="container">
+          <form onReset={handleClearForm} onSubmit={handleSubmit}>
+            <div>
+              <label htmlFor="fullName">Full Name</label>
+              <input
+                type="text"
+                name="fullName"
+                id="fullName"
+                value={contactData.fullName}
+                onChange={handleChange}
+                placeholder="Enter your Name"
+                className="text-primary"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                value={contactData.email}
+                onChange={handleChange}
+                placeholder="Enter your Email"
+                className="text-primary"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="phone">Phone</label>
+              <input
+                type="number"
+                name="phone"
+                id="phone"
+                value={contactData.phone}
+                onChange={handleChange}
+                placeholder="Enter your phone"
+                className="text-primary"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="city">City</label>
+              <input
+                type="text"
+                name="city"
+                id="city"
+                value={contactData.city}
+                onChange={handleChange}
+                placeholder="Enter your city"
+                className="text-primary"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="subject">Subject</label>
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                value={contactData.subject}
+                onChange={handleChange}
+                placeholder="Enter your subject"
+                className="text-primary"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="message">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                value={contactData.message}
+                onChange={handleChange}
+                placeholder="Enter your Message"
+                className="text-primary"
+              ></textarea>
+            </div>
+            <div>
+              <button type="reset" className="btn btn-danger">
+                Clear Form
+              </button>
+              <button type="submit" className="btn btn-success">
+                {isLoading ? "Loading" : "Submit"}
+              </button>
+            </div>
+          </form>
         </div>
-        <form onReset={handleClearFrom} onSubmit={handleSubmitFrom}>
-          <div>
-            <label htmlFor="Fullname">FullName:</label>
-            <input
-              type="text"
-              name="FullName"
-              value={FullName}
-              onChange={(e) => setFullName(e.target.value)}
-              className="text-primary"
-              placeholder="Enter your Name"
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="Email">Email:</label>
-            <input type="Email" 
-            name="Email" 
-            value={Email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="text-primary"
-            required
-            />
-          </div>
-          <div>
-            <label htmlFor="TextArea">Message:</label>
-            <textarea name="" 
-            id="TextArea"
-            value={TextArea}
-            onChange={(e) => setTextArea(e.target.value)}
-            className="text-primary"
-            required
-            ></textarea>
-          </div>
-          <button type="reset" className="btn btn-info" >Clear From</button>
-          <button type="submit">Submit
-          
-          </button>
-        </form>
       </div>
     </>
   );
 };
 
-export default about;
+export default About;

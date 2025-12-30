@@ -11,6 +11,8 @@ const Header= ()=>{
             <Link to={"/about"}className="text-decoration-none text-light">About</Link>
             <Link to={"/product"}className="text-decoration-none text-light">Product</Link>
             <Link to={"/contcat"}className="text-decoration-none text-light">Contact</Link>
+            <Link to={"/singup"}className="text-decoration-none text-light">Singup</Link>
+            <Link to={"/login"}className="text-decoration-none text-light">Login</Link>
         </div>
        </div>
         </>

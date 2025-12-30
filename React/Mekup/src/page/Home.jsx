@@ -10,24 +10,29 @@ import p21 from "../assets/h2.jpg";
 import p31 from "../assets/h3.jpg";
 
 const Home = () => {
+   
   return (
     <>
-    <div>
-      <div className="relative ">
-        <img src={lips} className="w-full rounded-lg" alt="Lips"
-           
-        />
-        <button className="absolute bottom-10  ms-20 bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-amber-400"onClick={() => alert("Button Clicked")}>By Now</button>
-      </div>
-      <div className=" w-370 h-120 flex  mx-6 mt-5 shadow-2xs shadow-blue-600 rounded bg-amber-100 ">
-         
-          <video  className="w-370 h-120 " controls>
-            <source src={viedo}  type="video/mp4" />
-            </video> 
+    <div className="h-100 mt-2">
+     
+         <video src={viedo}
+         autoPlay
+         loop
+         muted
+         className="w-full h-full object-cover"
+         />
          
        
       
       </div>
+       <div className="mt-2">
+        <img src={lips} className="w-full rounded-lg" alt="Lips"
+           
+        />
+        <button className="relative bottom-30  ms-20 bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-amber-400"onClick={() => alert("Button Clicked")}>By Now</button>
+      </div>
+      <div className=" w-380 h-120 flex  mt-1 shadow-2xs shadow-blue-600 rounded bg-amber-100 ">
+         
 
          <div className=" bg-amber-200 w-370 h-150 mx-6 mt-1 shadow-2xs shadow-blue-800">
               <div className=" flex justify-center text-red-600 font-bold text-lg ">  

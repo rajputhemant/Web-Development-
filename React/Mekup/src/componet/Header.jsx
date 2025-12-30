@@ -8,8 +8,8 @@ export const Header = () => {
   return (
     <>
     
-      <div className="flex  justify-between  items-center p-2 bg-blue-200 text-shadow-amber-50 top-0 sticky">
-        <span className="mx-3 ">Welcom the Mekup Store</span>
+      <div className="flex  justify-between  items-center p-2 bg-gray-300 text-shadow-amber-50 top-0 sticky w-380 h-20 rounded-2xl mt-0.5 opacity-95 z-100">
+        <span className="mx-3 text-2xl font-bold"><h1>Welcom the Mekup Store</h1></span>
         <div className=" flex gap-5 mx-3">
         <Link to={"/"} className="decoration-none flex items-center gap-2 text-red-600"> <FaHome /> <span>Home</span></Link>
         <Link to={"/about"} className="decoration-none flex items-center gap-2"> <FaOutdent /><span>About</span></Link>
