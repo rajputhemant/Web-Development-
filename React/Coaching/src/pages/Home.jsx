@@ -57,6 +57,13 @@ const Home = () => {
         Error.fullName = "Only Contain A-Z , a-z and space";
       }
     }
+     if (formData.guardianName.length < 3) {
+      Error.guardianName = "Name should be More Than 3 Characters";
+    } else {
+      if (!/^[A-Za-z ]+$/.test(formData.guardianName)) {
+        Error.guardianName = "Only Contain A-Z , a-z and space";
+      }
+    }
 
     if (
       !/^[\w\.]+@(gmail|outlook|ricr|yahoo)\.(com|in|co.in)$/.test(
@@ -69,7 +76,11 @@ const Home = () => {
     if (!/^[6-9]\d{9}$/.test(formData.mobileNumber)) {
       Error.mobileNumber = "Only Indian Mobile Number allowed";
     }
-
+    
+    if (!/^[6-9]\d{9}$/.test(formData.guardianContact)) {
+      Error.guardianContact = "Only Indian Mobile Number allowed";
+    }
+   
     setValidationError(Error);
 
     return Object.keys(Error).length > 0 ? false : true;
@@ -163,7 +174,7 @@ const Home = () => {
                     value={formData.mobileNumber}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 transition"
+                    className="w-full px-4 h-fit  py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 transition"
                   />
                     {validationError.mobileNumber && (
                       <span className="text-xs text-red-500">
@@ -176,8 +187,13 @@ const Home = () => {
                     value={formData.dateOfBirth}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 transition"
+                    className="w-full  h-fit px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 transition"
                   />
+                  {validationError.dateOfBirth && (
+                      <span className="text-xs text-red-500">
+                        {validationError.dateOfBirth}
+                      </span>
+                    )}
                 </div>
               </div>
 
@@ -299,8 +315,13 @@ const Home = () => {
                     value={formData.guardianName}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 transition"
+                    className="w-full h-fit  px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 transition"
                   />
+                   {validationError.guardianName && (
+                      <span className="text-xs text-red-500">
+                        {validationError.guardianName}
+                      </span>
+                    )}
                   <input
                     type="tel"
                     name="guardianContact"
@@ -309,8 +330,13 @@ const Home = () => {
                     value={formData.guardianContact}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 transition"
+                    className="w-full h-fit  px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 transition"
                   />
+                   {validationError.guardianContact && (
+                      <span className="text-xs text-red-500">
+                        {validationError.guardianContact}
+                      </span>
+                    )}
                 </div>
               </div>
 
