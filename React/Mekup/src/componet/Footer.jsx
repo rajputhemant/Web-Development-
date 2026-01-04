@@ -34,15 +34,15 @@ export const Footer = () => {
         <div className=" ms-4 py-2 me-3">
           <h1 className="text-2xl text-black mb-2">Follow us</h1>
           <p>Stay connected tips & update❤️</p>
-          <div className="py-2 ">
-            <a href="https://www.instagram.com/hemantrajput_03?igsh=a244eHk4Znl0b3Ex"target="_blank">
-            <img src={insta} className="w-15 h-10 mt-2" />
+          <div className=" flex gap-4 py-2 ">
+            <a href="https://www.instagram.com/hemantrajput_03?igsh=a244eHk4Znl0b3Ex"target="_blank" className='hover:pink-500'>
+            <img src={insta} className="w-8 h-8  mt-2 " />
             </a>
              <a href="https://www.facebook.com/share/18ADzHLNzM/"target="_blank">
-            <img src={fec} className="w-15 h-10 mt-2" />
+            <img src={fec} className="w-8 h-8 mt-2" />
             </a>
             <a href="https://www.snapchat.com/add/h_rajput2022111?share_id=X8MR4Xb1RQ4&locale=en-GB"target="_blank">
-            <img src={snap} className="w-15 h-10 mt-2" />
+            <img src={snap} className="w-8 h-8 mt-2 " />
             </a>
           </div>
         </div>
